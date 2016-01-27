@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupplementApi", "SupplementApi\SupplementApi.csproj", "{09DA7231-7E5A-416E-8EF7-26B3FC856511}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupplementApi.Tests", "SupplementApi.Tests\SupplementApi.Tests.csproj", "{B7E9E911-7156-4201-9243-C57FC3D27FD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resources", "Resources\Resources.csproj", "{7213791F-0EA2-444C-9BCD-1F40BA928D47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09DA7231-7E5A-416E-8EF7-26B3FC856511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09DA7231-7E5A-416E-8EF7-26B3FC856511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09DA7231-7E5A-416E-8EF7-26B3FC856511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09DA7231-7E5A-416E-8EF7-26B3FC856511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7E9E911-7156-4201-9243-C57FC3D27FD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7E9E911-7156-4201-9243-C57FC3D27FD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7E9E911-7156-4201-9243-C57FC3D27FD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7E9E911-7156-4201-9243-C57FC3D27FD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7213791F-0EA2-444C-9BCD-1F40BA928D47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7213791F-0EA2-444C-9BCD-1F40BA928D47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7213791F-0EA2-444C-9BCD-1F40BA928D47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7213791F-0EA2-444C-9BCD-1F40BA928D47}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

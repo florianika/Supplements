@@ -1,0 +1,251 @@
+﻿
+
+@{
+    ViewBag.Title = "Supplements";
+    var culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name.ToLowerInvariant();
+}
+
+@helper selected(string c, string culture)
+{
+    if (c == culture)
+    {
+        @:checked="checked"
+    }
+}
+
+@using (Html.BeginForm("SetCulture", "Home"))
+{
+    <fieldset>
+        <legend>@Resources.Resources.ChooseYourLanguage</legend>
+        <div class="control-group">
+            <div class="controls">
+                <label for="en-us">
+                    <input name="culture" id="en-us" value="en-us" type="radio" @selected("en-us", culture) /> English
+                </label>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <label for="it">
+                    <input name="culture" id="it" value="it" type="radio" @selected("it", culture) /> Italian
+                </label>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <label for="sq">
+                    <input name="culture" id="sq" value="sq" type="radio" @selected("al", culture) /> Shqip
+                </label>
+            </div>
+        </div>
+    </fieldset>
+}
+
+
+
+
+<h2>Supplements</h2>
+<div ng-app="Supplement" ng-controller="QuerySupplement">
+  
+    <div class="row" >
+        <div class="col-md-4"  ng-repeat="supplement in supplements">
+            <h3>{{supplement.Name}}</h3>
+                <div><strong>@Resources.Resources.Form </strong> {{supplement.ProductSupplementForm.Name}}</div>
+                <div><strong>@Resources.Resources.Producer </strong>  {{supplement.ProductProducer.Name}}</div>
+                <div><strong>@Resources.Resources.Type </strong> {{supplement.ProductType.Name}}</div>
+                <div><strong>@Resources.Resources.TargetGroup </strong>{{supplement.ProductTargetGroup.Name}}</div>
+                <div><strong>@Resources.Resources.DietaryClaim </strong>{{supplement.ProductDietaryClaim.Name}}</div>
+                <div><strong>@Resources.Resources.Website </strong>{{supplement.ProductProducer.Website}}</div>
+
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#{{supplement.Id}}">Ingredients</a>
+                        </h4>
+                    </div>
+                    <div id="{{supplement.Id}}" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="row" ng-repeat="ingredient in supplement.Ingredients">
+                                <div class="col-md-12">{{ingredient.Name}} {{ingredient.IngredientValue}} {{ingredient.IngredientUnit.Name}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>         
+        </div>
+
+        <div class="form-group" ng-show="showFilters">
+            <div class="row">
+                <div class="col-lg-12"><h4>@Resources.Resources.IngredientFilters</h4></div>
+                <div class="col-md-2">
+                    <label for="nameLikeOperator">@Resources.Resources.Like</label>
+                    <select class="form-control" ng-model="nameLikeOperator" id="nameLikeOperator">
+                        <option>@Resources.Resources.MustInclude</option>
+                        <option>@Resources.Resources.MayInclude</option>
+                        <option>@Resources.Resources.Exclude</option>
+                        <option>@Resources.Resources.BeginsWith</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label for="ingredientName">Ingredient Name</label>
+                    <input class="form-control" ng-model="ingredientName" id="ingredientName" type="text" />
+                </div>
+                <div class="col-md-2">
+                    <label for="ingredientCategory">Ingredient Categroy</label>
+                    <select class="form-control" ng-model="ingredientCategory" id="ingredientCategory">
+                        <option value="no_category">No Cateogory</option>
+                        <option value="vitamin">Vitamin</option>
+                        <option value="mineral">Mineral</option>
+                        <option value="amino_acid">Amino Acid</option>
+                        <option value="animal_part_source">Animal Part Source</option>
+                        <option value="bacteria">Bacteria</option>
+                        <option value="blend">Blend</option>
+                        <option value="botanical">Botanical</option>
+                        <option value="carbohydrate">Varbohydrate</option>
+                        <option value="chemical">Chemical</option>
+                        <option value="element">Element</option>
+                        <option value="enzyme">enzyme</option>
+                        <option value="fat">fat</option>
+                        <option value="fatty_acid">Fatty Acid</option>
+                        <option value="fiber">Fiber</option>
+                        <option value="header">Header</option>
+                        <option value="hormone">Hormone</option>
+                        <option value="other">Other</option>
+                        <option value="polysaccharide">Polysaccharide</option>
+                        <option value="protein">Protein</option>
+                        <option value="tbd">Tbd</option>
+                    </select>
+                </div>
+                <div class="col-md-1">
+                    <label for="operator">Operator</label>
+                    <select class="form-control" ng-model="quantityOperator" id="operator">
+                        <option  value="geq">>=</option>
+                        <option value="gt">></option>
+                        <option value="eq">=</option>
+                        <option value="leq"><=</option>
+                        <option value="lt"><</option>
+                    </select>
+                </div>
+                <div class="col-md-1">
+                    <label for="quantity">Quantity</label>
+                    <input class="form-control" ng-model="ingredientQuantity" id="quantity" type="number" />
+                </div>
+                <div class="col-md-1">
+                    <label for="unit">Unit</label>
+                    <select class="form-control" ng-model="ingredientUnit" id="unit">
+                        <option>mg</option>
+                        <option>g</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+              
+            </div>
+            <div class="row">
+                <div class="col-lg-12"><h4>Products Filters</h4></div>
+                <div class="col-md-2">
+                    <label for="productNameLikeOperator">Like</label>
+                    <select class="form-control" ng-model="productNameLikeOperator" id="productNameLikeOperator">
+                        <option>must_include</option>
+                        <option>may_include</option>
+                        <option>exclude</option>
+                        <option>begins_with</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="productName">Product Name</label>
+                    <input class="form-control" ng-model="productName" id="productName" type="text" />
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="productType">Product Type</label>
+                    <select class="form-control" ng-model="productType" id="productType">                        
+                        <option value="A1317">BOTANICAL SUPPELMENT WITH VITAMIN MINERAL</option> 
+                        <option value="A1305">DIETARY SUPPLEMENT AMINOACID PROTEIN</option>
+                        <option value="A1313">DIETARY SUPPLEMENT COMBINATION</option> 
+                        <option value="A1325">DIETARY SUPPLEMENT COMBINATION OTHER</option>
+                        <option value="A1306">DIETARY SUPPLEMENT HERBAL BOTANICAL</option> 
+                        <option value="A1299">DIETARY SUPPLEMENT MINERAL</option> 
+                        <option value="A1309">DIETARY SUPPLEMENT NONNUTRIENT NONBOTANICAL</option> 
+                        <option value="A1326">DIETARY SUPPLEMENT OTHER NUTRITIVE</option> 
+                        <option value="A1302">DIETRAY SUPPLEMENT VITAMIN</option> 
+                        <option value="A1310">FATTY ACCID FAT OIL</option>  
+                        <option value="A1315">MULTI VITAMIN MULTI MINERAL</option> 
+                        <option value="A1316">SINGLE VITAMIN SINGLE MINERAL</option> 
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="supplementForm">Supplement Form</label>
+                    <select class="form-control" ng-model="supplementForm" id="supplementForm">
+                      <option value="E0164">BAR</option>
+                      <option value="E0159">CAPSULE</option> 
+                      <option value="E0176">GUMMY</option> 
+                      <option value="E0165">LIQUID</option>
+                      <option value="E0174">LOZENGE</option>
+                      <option value="E0162">POWDER</option>
+                      <option value="E0161">SOFTGL CAPSULE</option>
+                      <option value="E0172">OTHER</option>
+                      <option value="E0177">UNKNOWN</option>
+                      <option value="E0155">TABLET</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="targetGroup">Target Group</label>
+                    <select class="form-control" ng-model="targetGroup">
+                       <option value="P0250">Four years and above</option>
+                       <option value="P0266">Infants children 12M</option>
+                       <option value="P0192">Children 12M 4Y</option>
+                       <option value="P0253">Pregnant lactating women</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <button type="submit" class="btn btn-primary" ng-click="createQuery()">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--
+        <div class="col-sm-2">Supplement Form</div>
+        <div class="col-sm-2">Producer</div>
+        <div class="col-sm-2">Type</div>
+        <div class="col-sm-2">Target Group</div>
+        <div class="col-sm-2">Dietary Claim</div>
+    </div>
+    <div class="row" ng-repeat="supplement in supplements">
+        <div class="col-sm-2">{{supplement.Name}}</div>
+        <div class="col-sm-2">{{supplement.ProductSupplementForm.Name}}</div>
+        <div class="col-sm-2">{{supplement.ProductProducer.Name}}</div>
+        <div class="col-sm-2">{{supplement.ProductType.Name}}</div>
+        <div class="col-sm-2">{{supplement.ProductTargetGroup.Name}}</div>
+        <div class="col-sm-2">{{supplement.ProductDietaryClaim.Name}}</div>
+        <div class="row" ng-repeat="ingredient in supplement.Ingredients">
+            <div class="col-sm-1">{{ingredient.Name}}</div>
+            <div class="col-sm-1">{{ingredient.IngredientValue}}</div>
+            <div class="col-sm-1">{{ingredient.IngredientUnit.Name}}</div>
+        </div>
+    </div>
+            -->
+        </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        (function ($) {
+            $("input[type = 'radio']").click(function () {
+                $(this).parents("form").submit(); // post form
+            });
+
+        })(jQuery);
+    </script>
+}

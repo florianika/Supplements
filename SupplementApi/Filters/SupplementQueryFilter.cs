@@ -157,7 +157,7 @@ namespace SupplementApi.Filters
 
         public static void IngredientFilter(ProductViewModel model, ref IEnumerable<ProductIngredient> includedProductIngredients, ref IEnumerable<ProductIngredient> excludedProductIngredients, SupplementModel db)
         {
-            if (model.IngredientFilters != null)
+            if (model.IngredientFilters != null)//vazhdo pak me f10 se une nuk e shtyp dot
             {
                 foreach (IngredientFilter filter in model.IngredientFilters)
                 {

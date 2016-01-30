@@ -223,6 +223,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Supplements.
+        /// </summary>
+        public static string Supplements {
+            get {
+                return ResourceManager.GetString("Supplements", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Target Group:.
         /// </summary>
         public static string TargetGroup {

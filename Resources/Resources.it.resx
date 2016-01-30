@@ -180,4 +180,7 @@
   <data name="Website" xml:space="preserve">
     <value>Sito Web:</value>
   </data>
+  <data name="Supplements" xml:space="preserve">
+    <value>Supplementi</value>
+  </data>
 </root>

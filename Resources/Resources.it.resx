@@ -121,7 +121,7 @@
     <value>Inizia Con</value>
   </data>
   <data name="ChooseYourLanguage" xml:space="preserve">
-    <value>Scieli La Lingua</value>
+    <value>Scegli La Lingua</value>
   </data>
   <data name="DietaryClaim" xml:space="preserve">
     <value>Reclamo Dietetico</value>
@@ -132,8 +132,17 @@
   <data name="Form" xml:space="preserve">
     <value>Forma:</value>
   </data>
+  <data name="IngredientCategroy" xml:space="preserve">
+    <value>Categoria di Ingrediente</value>
+  </data>
   <data name="IngredientFilters" xml:space="preserve">
     <value>Filtri Di Ingrediente</value>
+  </data>
+  <data name="IngredientName" xml:space="preserve">
+    <value>Nome del Ingrediente</value>
+  </data>
+  <data name="Ingredients" xml:space="preserve">
+    <value>Ingredienti</value>
   </data>
   <data name="Like" xml:space="preserve">
     <value>Come</value>
@@ -146,6 +155,21 @@
   </data>
   <data name="Producer" xml:space="preserve">
     <value>Produttore:</value>
+  </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>Nome Prodotto</value>
+  </data>
+  <data name="ProductsFilters" xml:space="preserve">
+    <value>Prodotti Filtri</value>
+  </data>
+  <data name="ProductType" xml:space="preserve">
+    <value>Tipo Prodotto</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Quantità</value>
+  </data>
+  <data name="SupplementForm" xml:space="preserve">
+    <value>Forma di Supplemento</value>
   </data>
   <data name="TargetGroup" xml:space="preserve">
     <value>Gruppo Target</value>

@@ -106,11 +106,38 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ingredient Categroy.
+        /// </summary>
+        public static string IngredientCategroy {
+            get {
+                return ResourceManager.GetString("IngredientCategroy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ingredient Filters.
         /// </summary>
         public static string IngredientFilters {
             get {
                 return ResourceManager.GetString("IngredientFilters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ingredient Name.
+        /// </summary>
+        public static string IngredientName {
+            get {
+                return ResourceManager.GetString("IngredientName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ingredients.
+        /// </summary>
+        public static string Ingredients {
+            get {
+                return ResourceManager.GetString("Ingredients", resourceCulture);
             }
         }
         
@@ -147,6 +174,51 @@ namespace Resources {
         public static string Producer {
             get {
                 return ResourceManager.GetString("Producer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Name.
+        /// </summary>
+        public static string ProductName {
+            get {
+                return ResourceManager.GetString("ProductName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Products Filters.
+        /// </summary>
+        public static string ProductsFilters {
+            get {
+                return ResourceManager.GetString("ProductsFilters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Type.
+        /// </summary>
+        public static string ProductType {
+            get {
+                return ResourceManager.GetString("ProductType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quantity.
+        /// </summary>
+        public static string Quantity {
+            get {
+                return ResourceManager.GetString("Quantity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Supplement Form.
+        /// </summary>
+        public static string SupplementForm {
+            get {
+                return ResourceManager.GetString("SupplementForm", resourceCulture);
             }
         }
         

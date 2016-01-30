@@ -61,7 +61,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#{{supplement.Id}}">Ingredients</a>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#{{supplement.Id}}">@Resources.Resources.Ingredients</a>
                         </h4>
                     </div>
                     <div id="{{supplement.Id}}" class="panel-collapse collapse">
@@ -81,18 +81,18 @@
                 <div class="col-md-2">
                     <label for="nameLikeOperator">@Resources.Resources.Like</label>
                     <select class="form-control" ng-model="nameLikeOperator" id="nameLikeOperator">
-                        <option>@Resources.Resources.MustInclude</option>
-                        <option>@Resources.Resources.MayInclude</option>
-                        <option>@Resources.Resources.Exclude</option>
-                        <option>@Resources.Resources.BeginsWith</option>
+                        <option value="must_include">@Resources.Resources.MustInclude</option>
+                        <option value="may_include">@Resources.Resources.MayInclude</option>
+                        <option value="exclude">@Resources.Resources.Exclude</option>
+                        <option value="begins_with">@Resources.Resources.BeginsWith</option>
                     </select>
                 </div>
                 <div class="col-md-2">
-                    <label for="ingredientName">Ingredient Name</label>
+                    <label for="ingredientName">@Resources.Resources.IngredientName</label>
                     <input class="form-control" ng-model="ingredientName" id="ingredientName" type="text" />
                 </div>
                 <div class="col-md-2">
-                    <label for="ingredientCategory">Ingredient Categroy</label>
+                    <label for="ingredientCategory">@Resources.Resources.IngredientCategroy</label>
                     <select class="form-control" ng-model="ingredientCategory" id="ingredientCategory">
                         <option value="no_category">No Cateogory</option>
                         <option value="vitamin">Vitamin</option>
@@ -128,7 +128,7 @@
                     </select>
                 </div>
                 <div class="col-md-1">
-                    <label for="quantity">Quantity</label>
+                    <label for="quantity">@Resources.Resources.Quantity</label>
                     <input class="form-control" ng-model="ingredientQuantity" id="quantity" type="number" />
                 </div>
                 <div class="col-md-1">
@@ -143,25 +143,25 @@
               
             </div>
             <div class="row">
-                <div class="col-lg-12"><h4>Products Filters</h4></div>
+                <div class="col-lg-12"><h4>@Resources.Resources.IngredientCategroy</h4></div>
                 <div class="col-md-2">
                     <label for="productNameLikeOperator">Like</label>
                     <select class="form-control" ng-model="productNameLikeOperator" id="productNameLikeOperator">
-                        <option>must_include</option>
-                        <option>may_include</option>
-                        <option>exclude</option>
-                        <option>begins_with</option>
+                        <option value="must_include">@Resources.Resources.MustInclude</option>
+                        <option value="may_include">@Resources.Resources.MayInclude</option>
+                        <option value="exclude">@Resources.Resources.Exclude</option>
+                        <option value="begins_with">@Resources.Resources.BeginsWith</option>
                     </select>
                 </div>
                 <div class="col-md-6">
-                    <label for="productName">Product Name</label>
+                    <label for="productName">@Resources.Resources.ProductName</label>
                     <input class="form-control" ng-model="productName" id="productName" type="text" />
                 </div>
                 
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <label for="productType">Product Type</label>
+                    <label for="productType">@Resources.Resources.ProductType</label>
                     <select class="form-control" ng-model="productType" id="productType">                        
                         <option value="A1317">BOTANICAL SUPPELMENT WITH VITAMIN MINERAL</option> 
                         <option value="A1305">DIETARY SUPPLEMENT AMINOACID PROTEIN</option>
@@ -180,7 +180,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <label for="supplementForm">Supplement Form</label>
+                    <label for="supplementForm">@Resources.Resources.SupplementForm</label>
                     <select class="form-control" ng-model="supplementForm" id="supplementForm">
                       <option value="E0164">BAR</option>
                       <option value="E0159">CAPSULE</option> 
@@ -197,7 +197,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <label for="targetGroup">Target Group</label>
+                    <label for="targetGroup">@Resources.Resources.TargetGroup</label>
                     <select class="form-control" ng-model="targetGroup">
                        <option value="P0250">Four years and above</option>
                        <option value="P0266">Infants children 12M</option>

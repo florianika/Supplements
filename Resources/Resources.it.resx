@@ -180,7 +180,19 @@
   <data name="Website" xml:space="preserve">
     <value>Sito Web:</value>
   </data>
+  <data name="AminoAcid" xml:space="preserve">
+    <value>Amminoacido</value>
+  </data>
+  <data name="Mineral" xml:space="preserve">
+    <value>Minerale</value>
+  </data>
+  <data name="NoCateogory" xml:space="preserve">
+    <value>No Categoria</value>
+  </data>
   <data name="Supplements" xml:space="preserve">
     <value>Supplementi</value>
+  </data>
+  <data name="Vitamin" xml:space="preserve">
+    <value>Vitamina</value>
   </data>
 </root>

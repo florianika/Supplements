@@ -61,6 +61,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Amino Acid.
+        /// </summary>
+        public static string AminoAcid {
+            get {
+                return ResourceManager.GetString("AminoAcid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Begins With.
         /// </summary>
         public static string BeginsWith {
@@ -160,11 +169,29 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Mineral.
+        /// </summary>
+        public static string Mineral {
+            get {
+                return ResourceManager.GetString("Mineral", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Must Include.
         /// </summary>
         public static string MustInclude {
             get {
                 return ResourceManager.GetString("MustInclude", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Cateogory.
+        /// </summary>
+        public static string NoCateogory {
+            get {
+                return ResourceManager.GetString("NoCateogory", resourceCulture);
             }
         }
         
@@ -246,6 +273,15 @@ namespace Resources {
         public static string Type {
             get {
                 return ResourceManager.GetString("Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vitamin.
+        /// </summary>
+        public static string Vitamin {
+            get {
+                return ResourceManager.GetString("Vitamin", resourceCulture);
             }
         }
         

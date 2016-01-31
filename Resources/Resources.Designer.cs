@@ -70,11 +70,92 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Animal Part Source.
+        /// </summary>
+        public static string AnimalPartSource {
+            get {
+                return ResourceManager.GetString("AnimalPartSource", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bacteria.
+        /// </summary>
+        public static string Bacteria {
+            get {
+                return ResourceManager.GetString("Bacteria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BAR.
+        /// </summary>
+        public static string BAR {
+            get {
+                return ResourceManager.GetString("BAR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Begins With.
         /// </summary>
         public static string BeginsWith {
             get {
                 return ResourceManager.GetString("BeginsWith", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blend.
+        /// </summary>
+        public static string Blend {
+            get {
+                return ResourceManager.GetString("Blend", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Botanical.
+        /// </summary>
+        public static string Botanical {
+            get {
+                return ResourceManager.GetString("Botanical", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BOTANICAL SUPPELMENT WITH VITAMIN MINERAL.
+        /// </summary>
+        public static string BOTANICALSUPPELMENTWITHVITAMINMINERAL {
+            get {
+                return ResourceManager.GetString("BOTANICALSUPPELMENTWITHVITAMINMINERAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CAPSULE.
+        /// </summary>
+        public static string CAPSULE {
+            get {
+                return ResourceManager.GetString("CAPSULE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chemical.
+        /// </summary>
+        public static string Chemical {
+            get {
+                return ResourceManager.GetString("Chemical", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Children 12M 4Y.
+        /// </summary>
+        public static string Children12M4Y {
+            get {
+                return ResourceManager.GetString("Children12M4Y", resourceCulture);
             }
         }
         
@@ -97,6 +178,96 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to DIETARY SUPPLEMENT AMINOACID PROTEIN.
+        /// </summary>
+        public static string DIETARYSUPPLEMENTAMINOACIDPROTEIN {
+            get {
+                return ResourceManager.GetString("DIETARYSUPPLEMENTAMINOACIDPROTEIN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DIETARY SUPPLEMENT COMBINATION.
+        /// </summary>
+        public static string DIETARYSUPPLEMENTCOMBINATION {
+            get {
+                return ResourceManager.GetString("DIETARYSUPPLEMENTCOMBINATION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DIETARY SUPPLEMENT COMBINATION OTHER.
+        /// </summary>
+        public static string DIETARYSUPPLEMENTCOMBINATIONOTHER {
+            get {
+                return ResourceManager.GetString("DIETARYSUPPLEMENTCOMBINATIONOTHER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DIETARY SUPPLEMENT HERBAL BOTANICAL.
+        /// </summary>
+        public static string DIETARYSUPPLEMENTHERBALBOTANICAL {
+            get {
+                return ResourceManager.GetString("DIETARYSUPPLEMENTHERBALBOTANICAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DIETARY SUPPLEMENT MINERAL.
+        /// </summary>
+        public static string DIETARYSUPPLEMENTMINERAL {
+            get {
+                return ResourceManager.GetString("DIETARYSUPPLEMENTMINERAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DIETARY SUPPLEMENT NONNUTRIENT NONBOTANICAL.
+        /// </summary>
+        public static string DIETARYSUPPLEMENTNONNUTRIENTNONBOTANICAL {
+            get {
+                return ResourceManager.GetString("DIETARYSUPPLEMENTNONNUTRIENTNONBOTANICAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DIETARY SUPPLEMENT OTHER NUTRITIVE.
+        /// </summary>
+        public static string DIETARYSUPPLEMENTOTHERNUTRITIVE {
+            get {
+                return ResourceManager.GetString("DIETARYSUPPLEMENTOTHERNUTRITIVE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DIETRAY SUPPLEMENT VITAMIN.
+        /// </summary>
+        public static string DIETRAYSUPPLEMENTVITAMIN {
+            get {
+                return ResourceManager.GetString("DIETRAYSUPPLEMENTVITAMIN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Element.
+        /// </summary>
+        public static string Element {
+            get {
+                return ResourceManager.GetString("Element", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enzyme.
+        /// </summary>
+        public static string Enzyme {
+            get {
+                return ResourceManager.GetString("Enzyme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exclude.
         /// </summary>
         public static string Exclude {
@@ -106,11 +277,92 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fat.
+        /// </summary>
+        public static string Fat {
+            get {
+                return ResourceManager.GetString("Fat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FATTY ACCID FAT OIL.
+        /// </summary>
+        public static string FATTYACCIDFATOIL {
+            get {
+                return ResourceManager.GetString("FATTYACCIDFATOIL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fatty Acid.
+        /// </summary>
+        public static string FattyAcid {
+            get {
+                return ResourceManager.GetString("FattyAcid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fiber.
+        /// </summary>
+        public static string Fiber {
+            get {
+                return ResourceManager.GetString("Fiber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Form:.
         /// </summary>
         public static string Form {
             get {
                 return ResourceManager.GetString("Form", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Four years and above.
+        /// </summary>
+        public static string Fouryearsandabove {
+            get {
+                return ResourceManager.GetString("Fouryearsandabove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GUMMY.
+        /// </summary>
+        public static string GUMMY {
+            get {
+                return ResourceManager.GetString("GUMMY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Header.
+        /// </summary>
+        public static string Header {
+            get {
+                return ResourceManager.GetString("Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hormone.
+        /// </summary>
+        public static string Hormone {
+            get {
+                return ResourceManager.GetString("Hormone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Infants children 12M.
+        /// </summary>
+        public static string Infantschildren12M {
+            get {
+                return ResourceManager.GetString("Infantschildren12M", resourceCulture);
             }
         }
         
@@ -160,6 +412,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to LIQUID.
+        /// </summary>
+        public static string LIQUID {
+            get {
+                return ResourceManager.GetString("LIQUID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LOZENGE.
+        /// </summary>
+        public static string LOZENGE {
+            get {
+                return ResourceManager.GetString("LOZENGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to May Include.
         /// </summary>
         public static string MayInclude {
@@ -178,6 +448,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to MULTI VITAMIN MULTI MINERAL.
+        /// </summary>
+        public static string MULTIVITAMINMULTIMINERAL {
+            get {
+                return ResourceManager.GetString("MULTIVITAMINMULTIMINERAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Must Include.
         /// </summary>
         public static string MustInclude {
@@ -192,6 +471,51 @@ namespace Resources {
         public static string NoCateogory {
             get {
                 return ResourceManager.GetString("NoCateogory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Other.
+        /// </summary>
+        public static string Other {
+            get {
+                return ResourceManager.GetString("Other", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OTHER.
+        /// </summary>
+        public static string OTHER1 {
+            get {
+                return ResourceManager.GetString("OTHER1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Polysaccharide.
+        /// </summary>
+        public static string Polysaccharide {
+            get {
+                return ResourceManager.GetString("Polysaccharide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to POWDER.
+        /// </summary>
+        public static string POWDER {
+            get {
+                return ResourceManager.GetString("POWDER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pregnant lactating women.
+        /// </summary>
+        public static string Pregnantlactatingwomen {
+            get {
+                return ResourceManager.GetString("Pregnantlactatingwomen", resourceCulture);
             }
         }
         
@@ -232,11 +556,38 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Protein.
+        /// </summary>
+        public static string Protein {
+            get {
+                return ResourceManager.GetString("Protein", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Quantity.
         /// </summary>
         public static string Quantity {
             get {
                 return ResourceManager.GetString("Quantity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SINGLE VITAMIN SINGLE MINERAL.
+        /// </summary>
+        public static string SINGLEVITAMINSINGLEMINERAL {
+            get {
+                return ResourceManager.GetString("SINGLEVITAMINSINGLEMINERAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SOFTGL CAPSULE.
+        /// </summary>
+        public static string SOFTGLCAPSULE {
+            get {
+                return ResourceManager.GetString("SOFTGLCAPSULE", resourceCulture);
             }
         }
         
@@ -259,6 +610,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to TABLET.
+        /// </summary>
+        public static string TABLET {
+            get {
+                return ResourceManager.GetString("TABLET", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Target Group:.
         /// </summary>
         public static string TargetGroup {
@@ -273,6 +633,24 @@ namespace Resources {
         public static string Type {
             get {
                 return ResourceManager.GetString("Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UNKNOWN.
+        /// </summary>
+        public static string UNKNOWN {
+            get {
+                return ResourceManager.GetString("UNKNOWN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Varbohydrate.
+        /// </summary>
+        public static string Varbohydrate {
+            get {
+                return ResourceManager.GetString("Varbohydrate", resourceCulture);
             }
         }
         

@@ -195,4 +195,130 @@
   <data name="Vitamin" xml:space="preserve">
     <value>Vitamina</value>
   </data>
+  <data name="AnimalPartSource" xml:space="preserve">
+    <value>Animal  Parte Fonte</value>
+  </data>
+  <data name="Bacteria" xml:space="preserve">
+    <value>Batteri</value>
+  </data>
+  <data name="BAR" xml:space="preserve">
+    <value>BAR</value>
+  </data>
+  <data name="Blend" xml:space="preserve">
+    <value>Miscela</value>
+  </data>
+  <data name="Botanical" xml:space="preserve">
+    <value>Botanico</value>
+  </data>
+  <data name="BOTANICALSUPPELMENTWITHVITAMINMINERAL" xml:space="preserve">
+    <value>SUPPLEMENTO BOTANICO CON VITAMINA MINERALE</value>
+  </data>
+  <data name="CAPSULE" xml:space="preserve">
+    <value>CAPSULA</value>
+  </data>
+  <data name="Chemical" xml:space="preserve">
+    <value>Chimico</value>
+  </data>
+  <data name="Children12M4Y" xml:space="preserve">
+    <value>Bambini 12M 4Y</value>
+  </data>
+  <data name="DIETARYSUPPLEMENTAMINOACIDPROTEIN" xml:space="preserve">
+    <value>SUPPLEMENTO DIETETICO AMMINOACIDI PROTEINE</value>
+  </data>
+  <data name="DIETARYSUPPLEMENTCOMBINATION" xml:space="preserve">
+    <value>SUPPLEMENTO DIETETICO COMBINAZIONE</value>
+  </data>
+  <data name="DIETARYSUPPLEMENTCOMBINATIONOTHER" xml:space="preserve">
+    <value>SUPPLEMENTO DIETETICO COMBINAZIONE ALTRO</value>
+  </data>
+  <data name="DIETARYSUPPLEMENTHERBALBOTANICAL" xml:space="preserve">
+    <value>SUPPLEMENTO DIETETICO COMBINAZIONE ERBE BOTANICA</value>
+  </data>
+  <data name="DIETARYSUPPLEMENTMINERAL" xml:space="preserve">
+    <value>SUPPLEMENTO DIETETICO MINERALE</value>
+  </data>
+  <data name="DIETARYSUPPLEMENTNONNUTRIENTNONBOTANICAL" xml:space="preserve">
+    <value>SUPPLEMENTO DIETETICO NON NUTRIENT NON BOTANICO</value>
+  </data>
+  <data name="DIETARYSUPPLEMENTOTHERNUTRITIVE" xml:space="preserve">
+    <value>SUPPLEMENTO DIETETICO ALTRE NUTRITIVE</value>
+  </data>
+  <data name="DIETRAYSUPPLEMENTVITAMIN" xml:space="preserve">
+    <value>SUPPLEMENTO DIETETICO  VITAMINA</value>
+  </data>
+  <data name="Element" xml:space="preserve">
+    <value>Elemento</value>
+  </data>
+  <data name="Enzyme" xml:space="preserve">
+    <value>Enzima</value>
+  </data>
+  <data name="Fat" xml:space="preserve">
+    <value>Grasso</value>
+  </data>
+  <data name="FATTYACCIDFATOIL" xml:space="preserve">
+    <value>ACIDI GRASSI GRASSO OLIO</value>
+  </data>
+  <data name="FattyAcid" xml:space="preserve">
+    <value>Acido Grasso</value>
+  </data>
+  <data name="Fiber" xml:space="preserve">
+    <value>Fibra</value>
+  </data>
+  <data name="Fouryearsandabove" xml:space="preserve">
+    <value>Quattro anni e oltre</value>
+  </data>
+  <data name="GUMMY" xml:space="preserve">
+    <value>GOMMOSO</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>Intestazione</value>
+  </data>
+  <data name="Hormone" xml:space="preserve">
+    <value>Ormone</value>
+  </data>
+  <data name="Infantschildren12M" xml:space="preserve">
+    <value>Neonati bambini 12M</value>
+  </data>
+  <data name="LIQUID" xml:space="preserve">
+    <value>LIQUIDO</value>
+  </data>
+  <data name="LOZENGE" xml:space="preserve">
+    <value>LOSANGA</value>
+  </data>
+  <data name="MULTIVITAMINMULTIMINERAL" xml:space="preserve">
+    <value>MULTI VITAMINA MULTI MINERALE</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Altro</value>
+  </data>
+  <data name="OTHER1" xml:space="preserve">
+    <value>ALTRO</value>
+  </data>
+  <data name="Polysaccharide" xml:space="preserve">
+    <value>Polisaccaride</value>
+  </data>
+  <data name="POWDER" xml:space="preserve">
+    <value>POLVERE</value>
+  </data>
+  <data name="Pregnantlactatingwomen" xml:space="preserve">
+    <value>Donne che allattano incinte</value>
+  </data>
+  <data name="Protein" xml:space="preserve">
+    <value>Proteina</value>
+  </data>
+  <data name="SINGLEVITAMINSINGLEMINERAL" xml:space="preserve">
+    <value>VITAMINA SINGOLO MINERALE SINGOLO</value>
+  </data>
+  <data name="SOFTGLCAPSULE" xml:space="preserve">
+    <value>SOFTGEL CAPSULE</value>
+  </data>
+  <data name="TABLET" xml:space="preserve">
+    <value>TAVOLETTA</value>
+  </data>
+  <data name="UNKNOWN" xml:space="preserve">
+    <value>SCONOSCIUTO</value>
+  </data>
+  <data name="Varbohydrate" xml:space="preserve">
+    <value>Carboidrato</value>
+  </data>
 </root>

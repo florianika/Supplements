@@ -195,4 +195,130 @@
   <data name="Vitamin" xml:space="preserve">
     <value>Vitamin</value>
   </data>
+  <data name="AnimalPartSource" xml:space="preserve">
+    <value>Animal Part Source</value>
+  </data>
+  <data name="Bacteria" xml:space="preserve">
+    <value>Bacteria</value>
+  </data>
+  <data name="BAR" xml:space="preserve">
+    <value>BAR</value>
+  </data>
+  <data name="Blend" xml:space="preserve">
+    <value>Blend</value>
+  </data>
+  <data name="Botanical" xml:space="preserve">
+    <value>Botanical</value>
+  </data>
+  <data name="BOTANICALSUPPELMENTWITHVITAMINMINERAL" xml:space="preserve">
+    <value>BOTANICAL SUPPELMENT WITH VITAMIN MINERAL</value>
+  </data>
+  <data name="CAPSULE" xml:space="preserve">
+    <value>CAPSULE</value>
+  </data>
+  <data name="Chemical" xml:space="preserve">
+    <value>Chemical</value>
+  </data>
+  <data name="Children12M4Y" xml:space="preserve">
+    <value>Children 12M 4Y</value>
+  </data>
+  <data name="DIETARYSUPPLEMENTAMINOACIDPROTEIN" xml:space="preserve">
+    <value>DIETARY SUPPLEMENT AMINOACID PROTEIN</value>
+  </data>
+  <data name="DIETARYSUPPLEMENTCOMBINATION" xml:space="preserve">
+    <value>DIETARY SUPPLEMENT COMBINATION</value>
+  </data>
+  <data name="DIETARYSUPPLEMENTCOMBINATIONOTHER" xml:space="preserve">
+    <value>DIETARY SUPPLEMENT COMBINATION OTHER</value>
+  </data>
+  <data name="DIETARYSUPPLEMENTHERBALBOTANICAL" xml:space="preserve">
+    <value>DIETARY SUPPLEMENT HERBAL BOTANICAL</value>
+  </data>
+  <data name="DIETARYSUPPLEMENTMINERAL" xml:space="preserve">
+    <value>DIETARY SUPPLEMENT MINERAL</value>
+  </data>
+  <data name="DIETARYSUPPLEMENTNONNUTRIENTNONBOTANICAL" xml:space="preserve">
+    <value>DIETARY SUPPLEMENT NONNUTRIENT NONBOTANICAL</value>
+  </data>
+  <data name="DIETARYSUPPLEMENTOTHERNUTRITIVE" xml:space="preserve">
+    <value>DIETARY SUPPLEMENT OTHER NUTRITIVE</value>
+  </data>
+  <data name="DIETRAYSUPPLEMENTVITAMIN" xml:space="preserve">
+    <value>DIETRAY SUPPLEMENT VITAMIN</value>
+  </data>
+  <data name="Element" xml:space="preserve">
+    <value>Element</value>
+  </data>
+  <data name="Enzyme" xml:space="preserve">
+    <value>Enzyme</value>
+  </data>
+  <data name="Fat" xml:space="preserve">
+    <value>Fat</value>
+  </data>
+  <data name="FATTYACCIDFATOIL" xml:space="preserve">
+    <value>FATTY ACCID FAT OIL</value>
+  </data>
+  <data name="FattyAcid" xml:space="preserve">
+    <value>Fatty Acid</value>
+  </data>
+  <data name="Fiber" xml:space="preserve">
+    <value>Fiber</value>
+  </data>
+  <data name="Fouryearsandabove" xml:space="preserve">
+    <value>Four years and above</value>
+  </data>
+  <data name="GUMMY" xml:space="preserve">
+    <value>GUMMY</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>Header</value>
+  </data>
+  <data name="Hormone" xml:space="preserve">
+    <value>Hormone</value>
+  </data>
+  <data name="Infantschildren12M" xml:space="preserve">
+    <value>Infants children 12M</value>
+  </data>
+  <data name="LIQUID" xml:space="preserve">
+    <value>LIQUID</value>
+  </data>
+  <data name="LOZENGE" xml:space="preserve">
+    <value>LOZENGE</value>
+  </data>
+  <data name="MULTIVITAMINMULTIMINERAL" xml:space="preserve">
+    <value>MULTI VITAMIN MULTI MINERAL</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="OTHER1" xml:space="preserve">
+    <value>OTHER</value>
+  </data>
+  <data name="Polysaccharide" xml:space="preserve">
+    <value>Polysaccharide</value>
+  </data>
+  <data name="POWDER" xml:space="preserve">
+    <value>POWDER</value>
+  </data>
+  <data name="Pregnantlactatingwomen" xml:space="preserve">
+    <value>Pregnant lactating women</value>
+  </data>
+  <data name="Protein" xml:space="preserve">
+    <value>Protein</value>
+  </data>
+  <data name="SINGLEVITAMINSINGLEMINERAL" xml:space="preserve">
+    <value>SINGLE VITAMIN SINGLE MINERAL</value>
+  </data>
+  <data name="SOFTGLCAPSULE" xml:space="preserve">
+    <value>SOFTGL CAPSULE</value>
+  </data>
+  <data name="TABLET" xml:space="preserve">
+    <value>TABLET</value>
+  </data>
+  <data name="UNKNOWN" xml:space="preserve">
+    <value>UNKNOWN</value>
+  </data>
+  <data name="Varbohydrate" xml:space="preserve">
+    <value>Varbohydrate</value>
+  </data>
 </root>

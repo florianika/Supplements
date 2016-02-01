@@ -13,12 +13,14 @@
         $scope.productType = '';
         $scope.query = '';
         $scope.supplementForm = '';
+        $scope.showLoading = false;
 
         $scope.getResults = function () {
 
             var res = $http.post("/api/ProductApi", $scope.query);
             res.success(function (data, status, headers, config) {
                 $scope.supplements = data;
+                $scope.showLoading = false;
             });
             res.error(function (data, status, headers, config) {
                 alert("failure message: " + JSON.stringify({ data: data }));
@@ -51,6 +53,7 @@
             };
             $scope.query = JSON.stringify(jsonQuery);
             $scope.showFilters = false;
+            $scope.showLoading = true;
             $scope.getResults();
         };
             

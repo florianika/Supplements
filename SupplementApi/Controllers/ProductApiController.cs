@@ -105,7 +105,7 @@ namespace SupplementApi.Controllers
                 if (filteredProducts == null)
                 {
                     filteredProducts = (from jpi in joinedProductIngredients
-                                        select jpi.Product);
+                                        select jpi.Product).Distinct();
                 }
                 else
                 {

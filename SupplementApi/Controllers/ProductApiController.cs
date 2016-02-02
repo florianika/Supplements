@@ -47,10 +47,10 @@ namespace SupplementApi.Controllers
             //This list is returned instead of Models.Product to avoid circular reference
             //ApiMode.Product is a mapped model of Model.Product to be use for api json porposes
             List<ApiModel.Product> returnProducts = new List<ApiModel.Product>();
-            IEnumerable<ProductIngredient> includedProductIngredients = null;
-            IEnumerable<ProductIngredient> excludedProductIngredients = null;
-            IEnumerable<ProductIngredient> joinedProductIngredients = null;
-            IEnumerable<Models.Product> filteredProducts = null;
+            IQueryable<ProductIngredient> includedProductIngredients = null;
+            IQueryable<ProductIngredient> excludedProductIngredients = null;
+            IQueryable<ProductIngredient> joinedProductIngredients = null;
+            IQueryable<Models.Product> filteredProducts = null;
 
             SupplementQueryFilter.IngredientFilter(model, ref includedProductIngredients, ref excludedProductIngredients, db);
 

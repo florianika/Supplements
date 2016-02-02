@@ -9,7 +9,7 @@ namespace SupplementApi.Filters
 {
     public class SupplementQueryFilter
     {
-        public static IEnumerable<Models.Product> DietaryClaimFilter(ProductViewModel model, IEnumerable<Models.Product> filteredProducts, SupplementModel db)
+        public static IQueryable<Models.Product> DietaryClaimFilter(ProductViewModel model, IQueryable<Models.Product> filteredProducts, SupplementModel db)
         {
             if (model.DietaryClaimFilters != null && model.DietaryClaimFilters.Count > 0)
             {
@@ -31,7 +31,7 @@ namespace SupplementApi.Filters
 
 
 
-        public static IEnumerable<Models.Product> TargetGroupFilter(ProductViewModel model, IEnumerable<Models.Product> filteredProducts, SupplementModel db)
+        public static IQueryable<Models.Product> TargetGroupFilter(ProductViewModel model, IQueryable<Models.Product> filteredProducts, SupplementModel db)
         {
             if (model.TargetGroupFilters != null && model.TargetGroupFilters.Count > 0 && (int)model.TargetGroupFilters[0].TargetGroupNameFilter != 0)
             {
@@ -53,7 +53,7 @@ namespace SupplementApi.Filters
         }
 
 
-        public static IEnumerable<Models.Product> SupplementFormFilter(ProductViewModel model, IEnumerable<Models.Product> filteredProducts, SupplementModel db)
+        public static IQueryable<Models.Product> SupplementFormFilter(ProductViewModel model, IQueryable<Models.Product> filteredProducts, SupplementModel db)
         {
             if (model.SupplementFormFilters != null && model.SupplementFormFilters.Count > 0 && (int)model.SupplementFormFilters[0].SupplementFormNameFilter != 0)
             {
@@ -74,7 +74,7 @@ namespace SupplementApi.Filters
             return filteredProducts;
         }
 
-        public static IEnumerable<Models.Product> ProductTypeFilter(ProductViewModel model, IEnumerable<Models.Product> filteredProducts, SupplementModel db)
+        public static IQueryable<Models.Product> ProductTypeFilter(ProductViewModel model, IQueryable<Models.Product> filteredProducts, SupplementModel db)
         {
             if (model.ProductTypeFilters != null && model.ProductTypeFilters.Count > 0 && (int)model.ProductTypeFilters[0].ProductTypeNameFilter != 0)
             {
@@ -97,7 +97,7 @@ namespace SupplementApi.Filters
         }
 
 
-        public static IEnumerable<ProductIngredient> IngredientCategoryFilter(ProductViewModel model, IEnumerable<ProductIngredient> joinedProductIngredients, SupplementModel db)
+        public static IQueryable<ProductIngredient> IngredientCategoryFilter(ProductViewModel model, IQueryable<ProductIngredient> joinedProductIngredients, SupplementModel db)
         {
             if (model.IngredientCategoryFilters != null
                 && model.IngredientCategoryFilters.Count > 0 
@@ -121,7 +121,7 @@ namespace SupplementApi.Filters
             return joinedProductIngredients;
         }
 
-        public static IEnumerable<Models.Product> ProductNameFilter(ProductViewModel model, IEnumerable<Models.Product> filteredProducts, SupplementModel db)
+        public static IQueryable<Models.Product> ProductNameFilter(ProductViewModel model, IQueryable<Models.Product> filteredProducts, SupplementModel db)
         {
             if (model.ProductNameFilters != null && model.ProductNameFilters.Count > 0 && model.ProductNameFilters[0].ProductName != "")
             {
@@ -155,7 +155,7 @@ namespace SupplementApi.Filters
             return filteredProducts;
         }
 
-        public static void IngredientFilter(ProductViewModel model, ref IEnumerable<ProductIngredient> includedProductIngredients, ref IEnumerable<ProductIngredient> excludedProductIngredients, SupplementModel db)
+        public static void IngredientFilter(ProductViewModel model, ref IQueryable<ProductIngredient> includedProductIngredients, ref IQueryable<ProductIngredient> excludedProductIngredients, SupplementModel db)
         {
             if (model.IngredientFilters != null)//vazhdo pak me f10 se une nuk e shtyp dot
             {

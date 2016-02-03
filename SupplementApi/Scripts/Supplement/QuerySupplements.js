@@ -14,6 +14,17 @@
         $scope.query = '';
         $scope.supplementForm = '';
         $scope.showLoading = false;
+        $scope.secondIngredientFilter = false;
+        $scope.thirdIngredientFilter = false;
+
+        $scope.showSecondIngredinetFilter = function () {
+            $scope.secondIngredientFilter = true;
+        };
+
+        $scope.showThirdIngredinetFilter = function () {
+            $scope.thirdIngredientFilter = true;
+        };
+
 
         $scope.getResults = function () {
 

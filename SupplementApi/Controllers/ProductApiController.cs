@@ -52,14 +52,14 @@ namespace SupplementApi.Controllers
             IQueryable<ProductIngredient> joinedProductIngredients = null;
             IQueryable<Models.Product> filteredProducts = null;
 
-            SupplementQueryFilter.IngredientFilter(model, ref includedProductIngredients, ref excludedProductIngredients, db);
-
+            //SupplementQueryFilter.IngredientFilter(model, ref includedProductIngredients, ref excludedProductIngredients, db);
+            filteredProducts = SupplementQueryFilter.ProductIngredientFilter(model, filteredProducts, db);
             //ProductName filter
             filteredProducts = SupplementQueryFilter.ProductNameFilter(model, filteredProducts, db);
 
             //IngredientCategory filter
             //TODO check this
-            joinedProductIngredients = SupplementQueryFilter.IngredientCategoryFilter(model, joinedProductIngredients, db);
+            filteredProducts = SupplementQueryFilter.IngredientCategoryFilter(model, filteredProducts, db);
             // List<Models.ProductIngredient> pis = productIngredients.ToList();
             //ProductType filter
             filteredProducts = SupplementQueryFilter.ProductTypeFilter(model, filteredProducts, db);
@@ -81,6 +81,7 @@ namespace SupplementApi.Controllers
                 {
                     filteredProducts = db.Products;
                 }
+
                 foreach (Models.ProductIngredient productIngredient in includedProductIngredients)
                 {
                     filteredProducts = filteredProducts.Where(fp => fp.PruductIngredients.Contains(productIngredient));

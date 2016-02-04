@@ -6,6 +6,16 @@
         $scope.quantityOperator = '';
         $scope.ingredientQuantity = '';
         $scope.ingredientUnit = '';
+        $scope.nameLikeOperator2 = '';
+        $scope.ingredientName2 = '';
+        $scope.quantityOperator2 = '';
+        $scope.ingredientQuantit2 = '';
+        $scope.ingredientUnit2 = '';
+        $scope.nameLikeOperator3 = '';
+        $scope.ingredientName3 = '';
+        $scope.quantityOperator3 = '';
+        $scope.ingredientQuantit3 = '';
+        $scope.ingredientUnit3 = '';
         $scope.showFilters = true;
         $scope.ingredientCategory = '';
         $scope.productNameLikeOperator = '';
@@ -46,6 +56,20 @@
                     "quantityOperator": $scope.quantityOperator,
                     "IngredientQuantity": $scope.ingredientQuantity,
                     "IngredientUnit": $scope.ingredientUnit
+                },
+                {
+                    "NameLikeOperator": $scope.nameLikeOperator2,
+                    "IngredientName": $scope.ingredientName2,
+                    "quantityOperator": $scope.quantityOperator2,
+                    "IngredientQuantity": $scope.ingredientQuantity2,
+                    "IngredientUnit": $scope.ingredientUnit2
+                },
+                {
+                    "NameLikeOperator": $scope.nameLikeOperator3,
+                    "IngredientName": $scope.ingredientName3,
+                    "quantityOperator": $scope.quantityOperator3,
+                    "IngredientQuantity": $scope.ingredientQuantity3,
+                    "IngredientUnit": $scope.ingredientUnit3
                 }],
                 IngredientCategoryFilters: [{
                     "IngredientCategoryName": $scope.ingredientCategory

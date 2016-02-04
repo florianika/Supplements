@@ -52,6 +52,7 @@ namespace SupplementApi.Filters
             return filteredProducts;
         }
 
+        
 
         public static IQueryable<Models.Product> SupplementFormFilter(ProductViewModel model, IQueryable<Models.Product> filteredProducts, SupplementModel db)
         {
@@ -97,28 +98,34 @@ namespace SupplementApi.Filters
         }
 
 
-        public static IQueryable<ProductIngredient> IngredientCategoryFilter(ProductViewModel model, IQueryable<ProductIngredient> joinedProductIngredients, SupplementModel db)
+        public static IQueryable<Product> IngredientCategoryFilter(ProductViewModel model, IQueryable<Product> filteredProducts, SupplementModel db)
         {
             if (model.IngredientCategoryFilters != null
                 && model.IngredientCategoryFilters.Count > 0 
                 && (model.IngredientCategoryFilters[0].IngredientCategoryName.ToString() != "" 
                 && model.IngredientCategoryFilters[0].IngredientCategoryName.ToString() != "no_category"))
             {
-                if (joinedProductIngredients == null)
+                //if (joinedProductIngredients == null)
+                //{
+                //    joinedProductIngredients = db.ProductIngredients;
+                //}
+                if (filteredProducts == null)
                 {
-                    joinedProductIngredients = db.ProductIngredients;
+                    filteredProducts = db.Products;
                 }
                 List<int> listOfCategoryIngredients = new List<int>();
                 foreach (IngredientCategoryFilter item in model.IngredientCategoryFilters)
                 {
                     listOfCategoryIngredients.Add((int)item.IngredientCategoryName);
                 }
+
+                filteredProducts = filteredProducts.Where(fp => fp.PruductIngredients.Any(pi => listOfCategoryIngredients.Contains(pi.Ingredient.IngredientCategory.Id)));
                 //TODO check this
-                joinedProductIngredients = joinedProductIngredients.Where(pi => listOfCategoryIngredients.Contains(pi.Ingredient.IngredientCategory.Id));
+                //joinedProductIngredients = joinedProductIngredients.Where(pi => listOfCategoryIngredients.Contains(pi.Ingredient.IngredientCategory.Id));
                
             }
 
-            return joinedProductIngredients;
+            return filteredProducts;
         }
 
         public static IQueryable<Models.Product> ProductNameFilter(ProductViewModel model, IQueryable<Models.Product> filteredProducts, SupplementModel db)
@@ -152,6 +159,148 @@ namespace SupplementApi.Filters
                 }
             }
 
+            return filteredProducts;
+        }
+
+        internal static IQueryable<Product> ProductIngredientFilter(ProductViewModel model, IQueryable<Product> filteredProducts, SupplementModel db)
+        {
+            if (filteredProducts == null)
+            {
+                filteredProducts = db.Products;
+            }
+            foreach (IngredientFilter filter in model.IngredientFilters)
+            {
+                switch (filter.NameLikeOperator)
+                {
+                    case LikeOpt.must_include:
+                        switch (filter.QuantityOperator)
+                        {
+                            case QuantityOpt.geq:
+                                filteredProducts = filteredProducts.Where(fp => 
+                                fp.PruductIngredients.Any(pi => pi.Ingredient.Name == filter.IngredientName 
+                                                          && pi.Unit1.Name == filter.IngredientUnit.ToString()
+                                                          && pi.Value >= filter.IngredientQuantity));
+                                break;
+                            case QuantityOpt.gt:
+                                filteredProducts = filteredProducts.Where(fp =>
+                                fp.PruductIngredients.Any(pi => pi.Ingredient.Name == filter.IngredientName
+                                                         && pi.Unit1.Name == filter.IngredientUnit.ToString()
+                                                         && pi.Value > filter.IngredientQuantity));
+                                break;
+                            case QuantityOpt.eq:
+                                filteredProducts = filteredProducts.Where(fp =>
+                                fp.PruductIngredients.Any(pi => pi.Ingredient.Name == filter.IngredientName
+                                                         && pi.Unit1.Name == filter.IngredientUnit.ToString()
+                                                         && pi.Value == filter.IngredientQuantity));
+                                break;
+                            case QuantityOpt.leq:
+                                filteredProducts = filteredProducts.Where(fp =>
+                                fp.PruductIngredients.Any(pi => pi.Ingredient.Name == filter.IngredientName
+                                                         && pi.Unit1.Name == filter.IngredientUnit.ToString()
+                                                         && pi.Value <= filter.IngredientQuantity));
+                                break;
+                            case QuantityOpt.lt:
+                                filteredProducts = filteredProducts.Where(fp =>
+                                fp.PruductIngredients.Any(pi => pi.Ingredient.Name == filter.IngredientName
+                                                         && pi.Unit1.Name == filter.IngredientUnit.ToString()
+                                                         && pi.Value < filter.IngredientQuantity));
+                                break;
+                            default:
+                                filteredProducts = filteredProducts.Where(fp =>
+                                fp.PruductIngredients.Any(pi => pi.Ingredient.Name == filter.IngredientName));
+                                break;
+                        }
+                        
+                        break;
+                    case LikeOpt.may_include:
+
+                        switch (filter.QuantityOperator)
+                        {
+                            case QuantityOpt.geq:
+                                filteredProducts = filteredProducts.Where(fp =>
+                                fp.PruductIngredients.Any(pi => pi.Ingredient.Name.Contains(filter.IngredientName)
+                                                          && pi.Unit1.Name == filter.IngredientUnit.ToString()
+                                                          && pi.Value >= filter.IngredientQuantity));
+                                break;
+                            case QuantityOpt.gt:
+                                filteredProducts = filteredProducts.Where(fp =>
+                                fp.PruductIngredients.Any(pi => pi.Ingredient.Name.Contains(filter.IngredientName)
+                                                         && pi.Unit1.Name == filter.IngredientUnit.ToString()
+                                                         && pi.Value > filter.IngredientQuantity));
+                                break;
+                            case QuantityOpt.eq:
+                                filteredProducts = filteredProducts.Where(fp =>
+                                fp.PruductIngredients.Any(pi => pi.Ingredient.Name.Contains(filter.IngredientName)
+                                                         && pi.Unit1.Name == filter.IngredientUnit.ToString()
+                                                         && pi.Value == filter.IngredientQuantity));
+                                break;
+                            case QuantityOpt.leq:
+                                filteredProducts = filteredProducts.Where(fp =>
+                                fp.PruductIngredients.Any(pi => pi.Ingredient.Name.Contains(filter.IngredientName)
+                                                         && pi.Unit1.Name == filter.IngredientUnit.ToString()
+                                                         && pi.Value == filter.IngredientQuantity));
+                                break;
+                            case QuantityOpt.lt:
+                                filteredProducts = filteredProducts.Where(fp =>
+                                fp.PruductIngredients.Any(pi => pi.Ingredient.Name.Contains(filter.IngredientName)
+                                                         && pi.Unit1.Name == filter.IngredientUnit.ToString()
+                                                         && pi.Value <= filter.IngredientQuantity));
+                                break;
+                            default:
+                                filteredProducts = filteredProducts.Where(fp =>
+                                fp.PruductIngredients.Any(pi => pi.Ingredient.Name.Contains(filter.IngredientName)));
+                                break;
+                        }
+                        break;
+                    case LikeOpt.exclude:
+                        filteredProducts = filteredProducts.Where(fp => fp.PruductIngredients.Any(pi => !pi.Ingredient.Name.Contains(filter.IngredientName)));
+                        break;
+                    case LikeOpt.begins_with:
+                        switch (filter.QuantityOperator)
+                        {
+                            case QuantityOpt.geq:
+                                filteredProducts = filteredProducts.Where(fp =>
+                                fp.PruductIngredients.Any(pi => pi.Ingredient.Name.StartsWith(filter.IngredientName)
+                                                          && pi.Unit1.Name == filter.IngredientUnit.ToString()
+                                                          && pi.Value >= filter.IngredientQuantity));
+                                break;
+                            case QuantityOpt.gt:
+                                filteredProducts = filteredProducts.Where(fp =>
+                                fp.PruductIngredients.Any(pi => pi.Ingredient.Name.StartsWith(filter.IngredientName)
+                                                         && pi.Unit1.Name == filter.IngredientUnit.ToString()
+                                                         && pi.Value > filter.IngredientQuantity));
+                                break;
+                            case QuantityOpt.eq:
+                                filteredProducts = filteredProducts.Where(fp =>
+                                fp.PruductIngredients.Any(pi => pi.Ingredient.Name.StartsWith(filter.IngredientName)
+                                                         && pi.Unit1.Name == filter.IngredientUnit.ToString()
+                                                         && pi.Value == filter.IngredientQuantity));
+                                break;
+                            case QuantityOpt.leq:
+                                filteredProducts = filteredProducts.Where(fp =>
+                                fp.PruductIngredients.Any(pi => pi.Ingredient.Name.StartsWith(filter.IngredientName)
+                                                         && pi.Unit1.Name == filter.IngredientUnit.ToString()
+                                                         && pi.Value == filter.IngredientQuantity));
+                                break;
+                            case QuantityOpt.lt:
+                                filteredProducts = filteredProducts.Where(fp =>
+                                fp.PruductIngredients.Any(pi => pi.Ingredient.Name.StartsWith(filter.IngredientName)
+                                                         && pi.Unit1.Name == filter.IngredientUnit.ToString()
+                                                         && pi.Value <= filter.IngredientQuantity));
+                                break;
+                            default:
+                                filteredProducts = filteredProducts.Where(fp =>
+                                fp.PruductIngredients.Any(pi => pi.Ingredient.Name.StartsWith(filter.IngredientName)));
+                                break;
+                        }
+                        filteredProducts = filteredProducts.Where(fp => fp.PruductIngredients.Any(pi => pi.Ingredient.Name.StartsWith(filter.IngredientName)));
+                        break;
+                    default:
+                        break;
+                }
+
+                
+            }
             return filteredProducts;
         }
 

@@ -40,7 +40,7 @@ namespace SupplementApi.Controllers
 
         // POST: api/ProductApi
         [HttpPost]
-        public List<ApiModel.Product> Post(ProductViewModel model)
+        public List<ApiModel.Product> Post(ProductFilterViewModel model)
         {
 
             List<Models.Product> mProducts = new List<Models.Product>();

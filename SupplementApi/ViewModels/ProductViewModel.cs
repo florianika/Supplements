@@ -6,7 +6,7 @@ using SupplementApi.Filters;
 
 namespace SupplementApi.ViewModels
 {
-    public class ProductViewModel
+    public class ProductFilterViewModel
     {
         public List<IngredientFilter> IngredientFilters { get; set; }
         public List<IngredientCategoryFilter> IngredientCategoryFilters { get; set; }

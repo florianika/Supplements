@@ -143,7 +143,9 @@
                     </select>
                 </div>
                 <div class="col-sm-1">
-                    <button class="btn" ng-hide="secondIngredientFilter" ng-click="showSecondIngredinetFilter()">Add</button>
+                    <button class="btn btn-default btn-sm" ng-hide="secondIngredientFilter" ng-click="showSecondIngredinetFilter()">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    </button>
                 </div>
             </div>
 
@@ -160,12 +162,12 @@
                 </div>
 
                 <div class="col-md-2">
-                    <label for="ingredientName">@Resources.Resources.IngredientName</label>
+                    <label for="ingredientName2">@Resources.Resources.IngredientName</label>
                     <input class="form-control" ng-model="ingredientName2" id="ingredientName2" type="text" />
                 </div>
                 <div class="col-md-2">
                     <label for="ingredientCategory">@Resources.Resources.IngredientCategroy</label>
-                    <select class="form-control" ng-model="ingredientCategory2" id="ingredientCategory2">
+                    <select class="form-control" ng-model="ingredientCategory" id="ingredientCategory">
                         <option value="no_category">@Resources.Resources.NoCateogory</option>
                         <option value="vitamin">@Resources.Resources.Vitamin</option>
                         <option value="mineral">@Resources.Resources.Mineral</option>
@@ -191,7 +193,7 @@
                 </div>
                 <div class="col-md-1">
                     <label for="operator">Operator</label>
-                    <select class="form-control" ng-model="quantityOperator2" id="operator2">
+                    <select class="form-control" ng-model="quantityOperator2" id="operator">
                         <option value="geq">>=</option>
                         <option value="gt">></option>
                         <option value="eq">=</option>
@@ -200,7 +202,7 @@
                     </select>
                 </div>
                 <div class="col-md-1">
-                    <label for="quantity">@Resources.Resources.Quantity</label>
+                    <label for="quantity2">@Resources.Resources.Quantity</label>
                     <input class="form-control" ng-model="ingredientQuantity2" id="quantity2" type="number" />
                 </div>
                 <div class="col-md-1">
@@ -211,13 +213,15 @@
                     </select>
                 </div>
                 <div class="col-sm-1">
-                    <button class="btn" ng-hide="thirdIngredientFilter" ng-click="showThirdIngredinetFilter()">Add</button>
+                    <button class="btn btn-default btn-sm" ng-hide="thirdIngredientFilter" ng-click="showThirdIngredinetFilter()">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    </button>
                 </div>
             </div>
             <div class="row" ng-show="thirdIngredientFilter">
 
                 <div class="col-md-2">
-                    <label for="nameLikeOperator">@Resources.Resources.Like</label>
+                    <label for="nameLikeOperator3">@Resources.Resources.Like</label>
                     <select class="form-control" ng-model="nameLikeOperator3" id="nameLikeOperator3">
                         <option value="must_include">@Resources.Resources.MustInclude</option>
                         <option value="may_include">@Resources.Resources.MayInclude</option>
@@ -227,11 +231,11 @@
                 </div>
 
                 <div class="col-md-2">
-                    <label for="ingredientName">@Resources.Resources.IngredientName</label>
+                    <label for="ingredientName3">@Resources.Resources.IngredientName</label>
                     <input class="form-control" ng-model="ingredientName3" id="ingredientName3" type="text" />
                 </div>
                 <div class="col-md-2">
-                    <label for="ingredientCategory">@Resources.Resources.IngredientCategroy</label>
+                    <label for="ingredientCategory3">@Resources.Resources.IngredientCategroy</label>
                     <select class="form-control" ng-model="ingredientCategory3" id="ingredientCategory3">
                         <option value="no_category">@Resources.Resources.NoCateogory</option>
                         <option value="vitamin">@Resources.Resources.Vitamin</option>
@@ -257,7 +261,7 @@
                     </select>
                 </div>
                 <div class="col-md-1">
-                    <label for="operator">Operator</label>
+                    <label for="operator3">Operator</label>
                     <select class="form-control" ng-model="quantityOperator3" id="operator3">
                         <option value="geq">>=</option>
                         <option value="gt">></option>
@@ -267,18 +271,20 @@
                     </select>
                 </div>
                 <div class="col-md-1">
-                    <label for="quantity">@Resources.Resources.Quantity</label>
+                    <label for="quantity3">@Resources.Resources.Quantity</label>
                     <input class="form-control" ng-model="ingredientQuantity3" id="quantity3" type="number" />
                 </div>
                 <div class="col-md-1">
-                    <label for="unit">Unit</label>
+                    <label for="unit3">Unit</label>
                     <select class="form-control" ng-model="ingredientUnit3" id="unit3">
                         <option>mg</option>
                         <option>g</option>
                     </select>
                 </div>
                 <div class="col-sm-1">
-                    <button class="btn" ng-hide="forthIngredientFilter" ng-click="showForthIngredinetFilter()">Add</button>
+                    <button class="btn btn-default btn-sm" ng-hide="forthIngredientFilter" ng-click="showForthIngredinetFilter()">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    </button>
                 </div>
             </div>
             <div class="row">

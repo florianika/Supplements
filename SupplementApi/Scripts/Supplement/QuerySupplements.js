@@ -35,6 +35,24 @@
             $scope.thirdIngredientFilter = true;
         };
 
+        $scope.hideThirdIngredientFilter = function () {
+            $scope.nameLikeOperator3 = '';
+            $scope.ingredientName3 = '';
+            $scope.quantityOperator3 = '';
+            $scope.ingredientQuantit3 = '';
+            $scope.ingredientUnit3 = '';
+            $scope.thirdIngredientFilter = false;
+        };
+
+        $scope.hideSecondIngredientFilter = function () {
+            $scope.nameLikeOperator2 = '';
+            $scope.ingredientName2 = '';
+            $scope.quantityOperator2 = '';
+            $scope.ingredientQuantit2 = '';
+            $scope.ingredientUnit2 = '';
+            $scope.secondIngredientFilter = false;
+        };
+
 
         $scope.getResults = function () {
 

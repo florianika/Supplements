@@ -142,15 +142,19 @@
                         <option>g</option>
                     </select>
                 </div>
-                <div class="col-sm-1">
+                <div class="col-md-1">
                     <button class="btn btn-default btn-sm" ng-hide="secondIngredientFilter" ng-click="showSecondIngredinetFilter()">
                         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                     </button>
+                    
                 </div>
             </div>
 
             <div class="row" ng-show="secondIngredientFilter">
-
+                <div class="col-lg-12"><h4>Ingredient 2</h4></div>
+            </div>
+            <div class="row" ng-show="secondIngredientFilter">
+               
                 <div class="col-md-2">
                     <label for="nameLikeOperator">@Resources.Resources.Like</label>
                     <select class="form-control" ng-model="nameLikeOperator2" id="nameLikeOperator2">
@@ -216,10 +220,17 @@
                     <button class="btn btn-default btn-sm" ng-hide="thirdIngredientFilter" ng-click="showThirdIngredinetFilter()">
                         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                     </button>
+                    <button class="btn btn-default btn-sm" ng-show="secondIngredientFilter" ng-click="hideSecondIngredientFilter()">
+                        <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                    </button>
+                    
                 </div>
             </div>
             <div class="row" ng-show="thirdIngredientFilter">
-
+                <div class="col-lg-12"><h4>Ingredient 3</h4></div>
+            </div>
+            <div class="row" ng-show="thirdIngredientFilter">
+                
                 <div class="col-md-2">
                     <label for="nameLikeOperator3">@Resources.Resources.Like</label>
                     <select class="form-control" ng-model="nameLikeOperator3" id="nameLikeOperator3">
@@ -281,11 +292,13 @@
                         <option>g</option>
                     </select>
                 </div>
+               
                 <div class="col-sm-1">
-                    <button class="btn btn-default btn-sm" ng-hide="forthIngredientFilter" ng-click="showForthIngredinetFilter()">
-                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    <button class="btn btn-default btn-sm" ng-show="thirdIngredientFilter" ng-click="hideThirdIngredientFilter()">
+                        <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
                     </button>
                 </div>
+                   
             </div>
             <div class="row">
                 <div class="col-lg-12"><h4>@Resources.Resources.ProductsFilters</h4></div>

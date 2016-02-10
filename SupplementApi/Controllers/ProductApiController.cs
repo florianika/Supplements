@@ -47,12 +47,7 @@ namespace SupplementApi.Controllers
             //This list is returned instead of Models.Product to avoid circular reference
             //ApiMode.Product is a mapped model of Model.Product to be use for api json porposes
             List<ApiModel.Product> returnProducts = new List<ApiModel.Product>();
-            IQueryable<ProductIngredient> includedProductIngredients = null;
-            IQueryable<ProductIngredient> excludedProductIngredients = null;
-            IQueryable<ProductIngredient> joinedProductIngredients = null;
             IQueryable<Models.Product> filteredProducts = null;
-
-            //SupplementQueryFilter.IngredientFilter(model, ref includedProductIngredients, ref excludedProductIngredients, db);
             filteredProducts = SupplementQueryFilter.ProductIngredientFilter(model, filteredProducts, db);
             //ProductName filter
             filteredProducts = SupplementQueryFilter.ProductNameFilter(model, filteredProducts, db);
@@ -64,57 +59,14 @@ namespace SupplementApi.Controllers
             //ProductType filter
             filteredProducts = SupplementQueryFilter.ProductTypeFilter(model, filteredProducts, db);
 
-
             //Supplement Form filter
             filteredProducts = SupplementQueryFilter.SupplementFormFilter(model, filteredProducts, db);
-
 
             //TargetGroup filtesr
             filteredProducts = SupplementQueryFilter.TargetGroupFilter(model, filteredProducts, db);
 
             //Dietary claim filter
             filteredProducts = SupplementQueryFilter.DietaryClaimFilter(model, filteredProducts, db);
-
-            if (includedProductIngredients != null && includedProductIngredients.Count() > 0)
-            {
-                if (filteredProducts == null)
-                {
-                    filteredProducts = db.Products;
-                }
-
-                foreach (Models.ProductIngredient productIngredient in includedProductIngredients)
-                {
-                    filteredProducts = filteredProducts.Where(fp => fp.PruductIngredients.Contains(productIngredient));
-                }
-            }
-
-            if (excludedProductIngredients != null)
-            {
-                if (filteredProducts == null)
-                {
-                    filteredProducts = db.Products;
-                }
-                foreach (ProductIngredient productIngredient in excludedProductIngredients)
-                {
-                    filteredProducts = filteredProducts.Where(fp => !fp.PruductIngredients.Contains(productIngredient));
-                }
-
-            }
-
-            if (joinedProductIngredients != null)
-            {
-                if (filteredProducts == null)
-                {
-                    filteredProducts = (from jpi in joinedProductIngredients
-                                        select jpi.Product).Distinct();
-                }
-                else
-                {
-                    IEnumerable<int> tmpProducts = (from jpi in joinedProductIngredients
-                                                        select jpi.Product.Id);
-                    filteredProducts =  filteredProducts.Where(fp => tmpProducts.Contains(fp.Id));
-                }
-            }
 
             if (filteredProducts != null)
             {

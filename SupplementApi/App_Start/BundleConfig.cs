@@ -23,7 +23,7 @@ namespace SupplementApi
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                 "~/Scripts/angular.js"));
             bundles.Add(new ScriptBundle("~/bundles/supplement").Include(
-               "~/Scripts/Supplement/QuerySupplements.js"));
+               "~/Scripts/Supplement/app.controller.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",

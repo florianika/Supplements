@@ -2,45 +2,8 @@
 
 @{
     ViewBag.Title = "Supplements";
-    var culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name.ToLowerInvariant();
+    //var culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name.ToLowerInvariant();
 }
-
-@helper selected(string c, string culture)
-{
-    if (c == culture)
-    {
-        @:checked="checked"
-    }
-}
-
-@using (Html.BeginForm("SetCulture", "Home"))
-{
-    <fieldset>
-        <legend>@Resources.Resources.ChooseYourLanguage</legend>
-        <div class="control-group">
-            <div class="controls">
-                <label for="en-us">
-                    <input name="culture" id="en-us" value="en-us" type="radio" @selected("en-us", culture) /> English
-                </label>
-            </div>
-        </div>
-        <div class="control-group">
-            <div class="controls">
-                <label for="it">
-                    <input name="culture" id="it" value="it" type="radio" @selected("it", culture) /> Italian
-                </label>
-            </div>
-        </div>
-        <div class="control-group">
-            <div class="controls">
-                <label for="sq">
-                    <input name="culture" id="sq" value="sq" type="radio" @selected("al", culture) /> Shqip
-                </label>
-            </div>
-        </div>
-    </fieldset>
-}
-
 
 
 

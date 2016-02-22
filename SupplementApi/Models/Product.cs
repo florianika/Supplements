@@ -48,6 +48,8 @@ namespace SupplementApi.Models
 
         public virtual DietaryClaim DietaryClaim { get; set; }
 
+        public int Priority { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProductIngredient> PruductIngredients { get; set; }
     }

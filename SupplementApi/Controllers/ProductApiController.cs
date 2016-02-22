@@ -28,7 +28,6 @@ namespace SupplementApi.Controllers
             return products;
         }
 
-       
         // GET: api/ProductApi/5
         public ApiModel.Product Get(int id)
         {
@@ -70,7 +69,8 @@ namespace SupplementApi.Controllers
 
             if (filteredProducts != null)
             {
-                foreach (Models.Product product in filteredProducts)
+                
+                foreach (Models.Product product in filteredProducts.OrderBy(p => p.Priority))
                 {
                     returnProducts.Add(MapModel.MapProduct(product));
                 }
@@ -79,11 +79,6 @@ namespace SupplementApi.Controllers
             return returnProducts;
         }
 
-        
-
-    
-       
-     
         // PUT: api/ProductApi/5
         public void Put(int id, [FromBody]string value)
         {

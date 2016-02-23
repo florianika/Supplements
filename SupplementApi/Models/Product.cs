@@ -24,18 +24,23 @@ namespace SupplementApi.Models
         [StringLength(500)]
         public string Description { get; set; }
 
+        [Display(ShortName ="Producer Name")]
         public int? Producer { get; set; }
 
         [StringLength(10)]
+        [Display(ShortName = "Product Type")]
         public string TypeId { get; set; }
 
         [StringLength(10)]
+        [Display(ShortName = "Supplement Form")]
         public string SupplementFormId { get; set; }
 
         [StringLength(10)]
+        [Display(ShortName = "Target Group")]
         public string TargetGroupId { get; set; }
 
         [StringLength(5)]
+        [Display(ShortName = "Dietary Calaim")]
         public string DietaryClaimId { get; set; }
 
         public virtual Producer Producer1 { get; set; }

@@ -54,7 +54,6 @@ namespace SupplementApi.Controllers
             //IngredientCategory filter
             //TODO check this
             filteredProducts = SupplementQueryFilter.IngredientCategoryFilter(model, filteredProducts, db);
-            // List<Models.ProductIngredient> pis = productIngredients.ToList();
             //ProductType filter
             filteredProducts = SupplementQueryFilter.ProductTypeFilter(model, filteredProducts, db);
 

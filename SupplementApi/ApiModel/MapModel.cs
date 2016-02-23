@@ -35,6 +35,7 @@ namespace SupplementApi.ApiModel
                 ingredients.Add(ingredient);
             }
             product.Ingredients = ingredients;
+            product.Priority = mProduct.Priority;
             return product;
         }
 

@@ -219,7 +219,11 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IngredientsController.cs" />
+    <Compile Include="Controllers\ProducersController.cs" />
     <Compile Include="Controllers\ProductApiController.cs" />
+    <Compile Include="Controllers\ProductIngredientsController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Filters\SupplementQueryFilter.cs" />
     <Compile Include="Global.asax.cs">
@@ -315,6 +319,26 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Supplements.cshtml" />
+    <Content Include="Views\Ingredients\Create.cshtml" />
+    <Content Include="Views\Ingredients\Delete.cshtml" />
+    <Content Include="Views\Ingredients\Details.cshtml" />
+    <Content Include="Views\Ingredients\Edit.cshtml" />
+    <Content Include="Views\Ingredients\Index.cshtml" />
+    <Content Include="Views\Producers\Create.cshtml" />
+    <Content Include="Views\Producers\Delete.cshtml" />
+    <Content Include="Views\Producers\Details.cshtml" />
+    <Content Include="Views\Producers\Edit.cshtml" />
+    <Content Include="Views\Producers\Index.cshtml" />
+    <Content Include="Views\Products\Create.cshtml" />
+    <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\ProductIngredients\Create.cshtml" />
+    <Content Include="Views\ProductIngredients\Delete.cshtml" />
+    <Content Include="Views\ProductIngredients\Details.cshtml" />
+    <Content Include="Views\ProductIngredients\Edit.cshtml" />
+    <Content Include="Views\ProductIngredients\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -16,6 +16,7 @@ namespace SupplementApi.ApiModel
         public TargetGroup ProductTargetGroup { get; set; }
         public DietaryClaim ProductDietaryClaim { get; set; }
         public List<Ingredient> Ingredients  { get; set; }
-       
+        public int Priority { get; set; }
+
     }
 }

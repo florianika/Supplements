@@ -15,20 +15,20 @@ namespace SupplementApi.Controllers
         private SupplementModel db = new SupplementModel();
 
         // GET: ProductIngredients/1
-        public ActionResult Index(int id)
+        public ActionResult Index(int productId)
         {
-            var productIngredients = db.ProductIngredients.Include(p => p.Ingredient).Include(p => p.Product).Include(p => p.Unit1).Where(p=> p.IdProduct == id);
+            var productIngredients = db.ProductIngredients.Include(p => p.Ingredient).Include(p => p.Product).Include(p => p.Unit1).Where(p=> p.IdProduct == productId);
             return View(productIngredients.ToList());
         }
 
         // GET: ProductIngredients/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(int? productId, int? ingredientId)
         {
-            if (id == null)
+            if (productId == null || ingredientId == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ProductIngredient productIngredient = db.ProductIngredients.Find(id);
+            ProductIngredient productIngredient = db.ProductIngredients.Find(new object[2] { productId, ingredientId });
             if (productIngredient == null)
             {
                 return HttpNotFound();
@@ -37,10 +37,10 @@ namespace SupplementApi.Controllers
         }
 
         // GET: ProductIngredients/Create
-        public ActionResult Create(int id)
+        public ActionResult Create(int productId)
         {
             ViewBag.IdIngredient = new SelectList(db.Ingredients, "Id", "Name");
-            ViewBag.IdProduct = new SelectList(db.Products.Where(p => p.Id == id), "Id", "Name");
+            ViewBag.IdProduct = new SelectList(db.Products.Where(p => p.Id == productId), "Id", "Name");
             ViewBag.Unit = new SelectList(db.Units, "Id", "Name");
             return View();
         }
@@ -56,7 +56,7 @@ namespace SupplementApi.Controllers
             {
                 db.ProductIngredients.Add(productIngredient);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", new { idProduct = productIngredient.IdProduct });
             }
 
             ViewBag.IdIngredient = new SelectList(db.Ingredients, "Id", "Name", productIngredient.IdIngredient);
@@ -66,13 +66,16 @@ namespace SupplementApi.Controllers
         }
 
         // GET: ProductIngredients/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(int? productId, int? ingredientId)
         {
-            if (id == null)
+            if (productId == null || ingredientId == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ProductIngredient productIngredient = db.ProductIngredients.Find(id);
+            //object[] parameters = new object[2];
+            //parameters[0] = new  { IdProduct = productId };
+            //parameters[1] = new { IdIngredient = ingredientId };
+            ProductIngredient productIngredient = db.ProductIngredients.Find(new object[2] {  productId ,ingredientId  });
             if (productIngredient == null)
             {
                 return HttpNotFound();
@@ -94,7 +97,7 @@ namespace SupplementApi.Controllers
             {
                 db.Entry(productIngredient).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", new { productId = productIngredient.IdProduct } );
             }
             ViewBag.IdIngredient = new SelectList(db.Ingredients, "Id", "Name", productIngredient.IdIngredient);
             ViewBag.IdProduct = new SelectList(db.Products, "Id", "Name", productIngredient.IdProduct);
@@ -103,13 +106,13 @@ namespace SupplementApi.Controllers
         }
 
         // GET: ProductIngredients/Delete/5
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(int? productId, int? ingredientId)
         {
-            if (id == null)
+            if (productId == null || ingredientId == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ProductIngredient productIngredient = db.ProductIngredients.Find(id);
+            ProductIngredient productIngredient = db.ProductIngredients.Find(new object[2] { productId, ingredientId });
             if (productIngredient == null)
             {
                 return HttpNotFound();
@@ -120,9 +123,9 @@ namespace SupplementApi.Controllers
         // POST: ProductIngredients/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(int productId, int ingredientId)
         {
-            ProductIngredient productIngredient = db.ProductIngredients.Find(id);
+            ProductIngredient productIngredient = db.ProductIngredients.Find(new object[2] { productId, ingredientId });
             db.ProductIngredients.Remove(productIngredient);
             db.SaveChanges();
             return RedirectToAction("Index");

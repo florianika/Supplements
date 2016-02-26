@@ -253,7 +253,8 @@ namespace SupplementApi.Filters
                         }
                         break;
                     case LikeOpt.exclude:
-                        filteredProducts = filteredProducts.Where(fp => fp.PruductIngredients.Any(pi => !pi.Ingredient.Name.Contains(filter.IngredientName)));
+                        filteredProducts = filteredProducts.Where(fp => 
+                        !fp.PruductIngredients.Any(pi => pi.Ingredient.Name.Contains(filter.IngredientName)));
                         break;
                     case LikeOpt.begins_with:
                         switch (filter.QuantityOperator)

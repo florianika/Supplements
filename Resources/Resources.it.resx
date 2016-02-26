@@ -324,4 +324,13 @@
   <data name="Loading" xml:space="preserve">
     <value>Caricando...</value>
   </data>
+  <data name="FortyFiveAndAbove" xml:space="preserve">
+    <value>Piu di 45 Anni</value>
+  </data>
+  <data name="FourYearTo16" xml:space="preserve">
+    <value>Da 4 Anni a 16 Anni</value>
+  </data>
+  <data name="SixteenTo45" xml:space="preserve">
+    <value>Da 16 Anni a 45 Anni</value>
+  </data>
 </root>

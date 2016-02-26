@@ -12,9 +12,13 @@ namespace SupplementApi.Filters
 
     public enum TargetGroup
     {
-        P0250 = 1, //Four_years_and_above_
-        P0266 = 2, //Infants_children_12M_
-        P0192 = 3, //Children_12M_4Y_
-        P0253 = 4 //Pregnant_lactating_women_
+        P0192 = 1, //Infants/Children  <12 mths
+        P0250 = 2, //Children 12 mths - < 4 years
+        P0253 = 3, //4 years - 16 Years
+        P0266 = 4, //16 Years - 45 Years
+        P0267 = 5, //45 Years and above
+        P0268 = 6 //Pregnant and lactating waman
+
+
     }
 }

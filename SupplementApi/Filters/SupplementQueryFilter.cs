@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using SupplementApi.ViewModels;
+using SupplementApi.FilterViewModels;
 using SupplementApi.Models;
 
 namespace SupplementApi.Filters

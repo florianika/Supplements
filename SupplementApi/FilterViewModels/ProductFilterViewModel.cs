@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using SupplementApi.Filters;
 
-namespace SupplementApi.ViewModels
+namespace SupplementApi.FilterViewModels
 {
     public class ProductFilterViewModel
     {

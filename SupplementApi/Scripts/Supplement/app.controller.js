@@ -21,6 +21,7 @@
         $scope.productNameLikeOperator = '';
         $scope.productName = '';
         $scope.productType = '';
+        $scope.targetGroup = '';
         $scope.query = '';
         $scope.supplementForm = '';
         $scope.showLoading = false;
@@ -98,6 +99,9 @@
                 }],
                 ProductTypeFilters: [{
                     "ProductTypeNameFilter": $scope.productType
+                }],
+                TargetGroupFilters: [{
+                    "TargetGroupNameFilter": $scope.targetGroup
                 }],
                 SupplementFormFilters: [{
                     "SupplementFormNameFilter": $scope.supplementForm

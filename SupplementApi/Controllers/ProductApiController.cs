@@ -6,7 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using SupplementApi.ApiModel;
 using SupplementApi.Models;
-using SupplementApi.ViewModels;
+using SupplementApi.FilterViewModels;
 using SupplementApi.Filters;
 
 

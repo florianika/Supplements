@@ -254,8 +254,8 @@
     <Compile Include="Filters\IngredientFilter.cs" />
     <Compile Include="Filters\ProductNameFilter.cs" />
     <Compile Include="Filters\ProductTypeFilter.cs" />
-    <Compile Include="ViewModels\ProductViewModel.cs" />
-    <Compile Include="ViewModels\Query.cs" />
+    <Compile Include="FilterViewModels\ProductFilterViewModel.cs" />
+    <Compile Include="FilterViewModels\Query.cs" />
     <Compile Include="Filters\SupplementFormFilter.cs" />
     <Compile Include="Filters\TargetGroupFilter.cs" />
   </ItemGroup>

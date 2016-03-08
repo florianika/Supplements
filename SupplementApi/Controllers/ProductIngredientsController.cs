@@ -41,6 +41,7 @@ namespace SupplementApi.Controllers
         {
             ViewBag.IdIngredient = new SelectList(db.Ingredients, "Id", "Name");
             ViewBag.IdProduct = new SelectList(db.Products.Where(p => p.Id == productId), "Id", "Name");
+            ViewBag.SelectedIdProduct = productId;
             ViewBag.Unit = new SelectList(db.Units, "Id", "Name");
             return View();
         }

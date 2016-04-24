@@ -40,6 +40,7 @@ namespace SupplementApi.Controllers
         public ActionResult Create(int productId)
         {
             ViewBag.IdIngredient = new SelectList(db.Ingredients, "Id", "Name");
+            ViewBag.IdIngredient2 = new SelectList(db.Ingredients, "Id", "Name");
             ViewBag.IdProduct = new SelectList(db.Products.Where(p => p.Id == productId), "Id", "Name");
             ViewBag.SelectedIdProduct = productId;
             ViewBag.Unit = new SelectList(db.Units, "Id", "Name");
@@ -61,6 +62,7 @@ namespace SupplementApi.Controllers
             }
 
             ViewBag.IdIngredient = new SelectList(db.Ingredients, "Id", "Name", productIngredient.IdIngredient);
+            ViewBag.IdIngredient2 = new SelectList(db.Ingredients, "Id", "Name", productIngredient.IdIngredient2);
             ViewBag.IdProduct = new SelectList(db.Products, "Id", "Name", productIngredient.IdProduct);
             ViewBag.Unit = new SelectList(db.Units, "Id", "Name", productIngredient.Unit);
             return View(productIngredient);
@@ -82,6 +84,7 @@ namespace SupplementApi.Controllers
                 return HttpNotFound();
             }
             ViewBag.IdIngredient = new SelectList(db.Ingredients, "Id", "Name", productIngredient.IdIngredient);
+            ViewBag.IdIngredient2 = new SelectList(db.Ingredients, "Id", "Name", productIngredient.IdIngredient2);
             ViewBag.IdProduct = new SelectList(db.Products, "Id", "Name", productIngredient.IdProduct);
             ViewBag.Unit = new SelectList(db.Units, "Id", "Name", productIngredient.Unit);
             return View(productIngredient);
@@ -101,6 +104,7 @@ namespace SupplementApi.Controllers
                 return RedirectToAction("Index", new { productId = productIngredient.IdProduct } );
             }
             ViewBag.IdIngredient = new SelectList(db.Ingredients, "Id", "Name", productIngredient.IdIngredient);
+            ViewBag.IdIngredient2 = new SelectList(db.Ingredients, "Id", "Name", productIngredient.IdIngredient2);
             ViewBag.IdProduct = new SelectList(db.Products, "Id", "Name", productIngredient.IdProduct);
             ViewBag.Unit = new SelectList(db.Units, "Id", "Name", productIngredient.Unit);
             return View(productIngredient);

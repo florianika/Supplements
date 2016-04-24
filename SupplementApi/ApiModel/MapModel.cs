@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using SupplementApi.Models;
 
 namespace SupplementApi.ApiModel
 {
@@ -30,9 +31,9 @@ namespace SupplementApi.ApiModel
             product.ProductDietaryClaim = dietaryClaim;
             List<Ingredient> ingredients = new List<Ingredient>();
             foreach (Models.ProductIngredient productIngredient in mProduct.PruductIngredients)
-            {
+            {               
                 Ingredient ingredient = MapIngredient(productIngredient);
-                ingredients.Add(ingredient);
+                ingredients.Add(ingredient);    
             }
             product.Ingredients = ingredients;
             product.Priority = mProduct.Priority;
@@ -50,6 +51,13 @@ namespace SupplementApi.ApiModel
             ingredient.IngredientCategory = category;
             Unit unit =  MapUnit(productIngredient);
             ingredient.IngredientUnit = unit;
+            if (productIngredient.IdIngredient2 != null)
+            {
+                ingredient.Id2 = productIngredient.IdIngredient2;
+                ingredient.Name2 = productIngredient.Ingredient2.Name;
+                ingredient.Description2 = productIngredient.Ingredient2.Description;
+                ingredient.Ingredient2Value = productIngredient.Value2;
+            }
             return ingredient;
         }
 

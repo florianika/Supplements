@@ -41,6 +41,12 @@ namespace SupplementApi.Models
                 .HasForeignKey(e => e.IdIngredient)
                 .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<Ingredient>()
+               .HasMany(e => e.PruductIngredients2)
+               .WithOptional(e => e.Ingredient2)
+               .HasForeignKey(e => e.IdIngredient2)
+               .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<IngredientCategory>()
                 .Property(e => e.Name)
                 .IsUnicode(false);

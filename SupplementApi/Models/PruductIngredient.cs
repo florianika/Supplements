@@ -22,10 +22,17 @@ namespace SupplementApi.Models
 
         public float? Value { get; set; }
 
+        [Column(Order = 4)]
+        public int? IdIngredient2 { get; set; }
+
+        public float? Value2 { get; set; }
+
         public virtual Ingredient Ingredient { get; set; }
 
         public virtual Product Product { get; set; }
 
         public virtual Unit Unit1 { get; set; }
+
+        public virtual Ingredient Ingredient2 { get; set; }
     }
 }
